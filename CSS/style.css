@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Element Selector */
+html {
+  font-family: "Bree Serif', serif";
+  /*
+    font-family: 'Bree Serif', serif;
+    font-family: 'Carattere', cursive;
+    font-family: 'Italianno', cursive;
+    font-family: 'Modak', cursive;
+    font-family: 'MonteCarlo', cursive;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Open Sans', sans-serif;*/
+}
+
+body {
+  margin: 0px;
+  width: 100%;
+}
+
+nav {
+  background-color: rgb(55, 51, 59);
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  display: inline-flex;
+  margin: 0px;
+  width: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+nav li {
+  padding: 0.8vw;
+}
+
+nav li:hover {
+  background-color: rgb(255, 159, 27);
+}
+
+header {
+  width: 100%;
+  height: 25vh;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  color: rgb(55, 51, 59);
+  font-family: "Italianno", cursive;
+  font-size: 5vw;
+}
+
+/* モバイル対応 */
+
+@media (max-width: 600px) {
+  video {
+    width: 100%; /* 20240103在小螢幕上佔滿 100% 寬度 */
+  }
+  .page-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-content {
+    margin-top: 50%;
+  }
+  .main-navi {
+    font-size: 0.8em;
+    margin-top: 10px;
+  }
+  .page-title {
+    font-size: 2.4em;
+  }
+}
+
+/* aside */
+#l {
+  float: left;
+  border: 0;
+}
+#l img {
+  width: 150px;
+  animation: kf2 3s linear 0.5s 5 /*←（繰り返し回数）＝２ */ backwards; /*←最後の状態を保持する */
+}
+@keyframes kf2 {
+  50% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+.aside-title {
+  padding: 0px 8px 8px;
+  border-bottom: 2px solid rgb(255, 159, 27);
+  font-weight: normal;
+  text-align: center;
+}
+.aside-menu {
+  list-style-type: none;
+}
+.aside-menu li {
+  border-bottom: 1px solid rgb(255, 159, 27);
+}
+.aside-menu a {
+  color: #432;
+  padding: 8px;
+  display: block;
+}
+.aside-menu a:hover {
+  color: purple;
+}
+
+aside img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+article {
+  background-image: url(../img/logo11.jpg);
+  background-repeat: no-repeat;
+  margin-top: 0;
+}
+/* home */
+
+#h h2 {
+  display: flex;
+  /* margin-left: 630px; */
+  font-size: 2rem;
+  font-family: "Modak", cursive;
+  /* 2024.01.01 */
+  margin-left: 0; /* 移除水平間距，使其在小屏幕上居中顯示 */
+  text-align: center; /* 文字居中 */
+}
+#h img {
+  display: flex;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  /* margin-left: 50px; */
+  float: left;
+  /* 2024.01.01 */
+  margin-left: 0;
+}
+#h11 {
+  /* margin-left: 500px; */
+  /* 2024.01.01 */
+  margin-left: 0;
+  margin: 0 auto; /* 使用 margin 屬性將圖片水平置中 */
+}
+#h11 h2 {
+  font-family: "Italianno", cursive;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+/* contactpage/introduct*/
+#f5 {
+  /* margin-left: 500px; */
+  font-size: 1rem;
+  /* 2024.01.01 */
+  margin-left: 0;
+}
+#f5 h1 {
+  text-align: center;
+  width: 250px;
+  animation: bg 10s infinite;
+}
+@keyframes bg {
+  30% {
+    background-color: lightcyan;
+  }
+  50% {
+    width: 200px;
+  }
+  70% {
+    background-color: lightgoldenrodyellow;
+  }
+}
+
+#f5 button {
+  text-decoration: double;
+  background-color: purple;
+  color: aliceblue;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 150px;
+}
+
+#f5 h2 {
+  margin-left: 180px;
+  font-size: 3rem;
+  font-family: "Italianno", cursive;
+}
+
+#f5 h3 {
+  font-family: "Italianno", cursive;
+  font-size: 1.5rem;
+}
+
+/* menu */
+.m {
+  /* margin-left: 300px; */
+  margin-left: 15px; /* 調整外邊距或其他樣式，以應對小屏幕 */
+}
+.m img {
+  /* border: 10px;
+  height: 400px;
+  width: 300px; */
+  /* 2024.01.03 */
+  height: 400px;
+  width: 100%; /* 讓圖像自適應父元素的寬度 */
+  /* height: auto; 保持原始寬高比例 */
+  border: 10px;
+  max-width: 300px; /* 設置最大寬度，避免過大的圖像在大屏幕上拉伸 */
+}
+
+/* news */
+.n {
+  /* margin-left: 300px; */
+  margin-left: 15px; /* 調整外邊距或其他樣式，以應對小屏幕 */
+}
+.n img {
+  padding: 10px;
+
+  display: flex;
+  width: 300px;
+  height: 240px;
+  margin-left: 30px;
+  border-radius: 20px;
+  float: left;
+}
+
+.n h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Italianno", cursive;
+  text-align: center;
+  /* width: 100%; */
+  animation: bg 10s infinite;
+}
+@keyframes bg {
+  30% {
+    background-color: lightcyan;
+  }
+  50% {
+    /* width: 200px; */
+    width: 100%; /* 讓背景色在小螢幕上佔滿 100% 寬度 */
+  }
+  70% {
+    background-color: lightgoldenrodyellow;
+  }
+}
+/*footer*/
+
+footer {
+  background-color: #aaa;
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+  height: 5vh;
+  padding-top: 8px;
+  position: fixed;
+  bottom: 0px;
+}
+footer p {
+  color: #fff;
+  font-size: 0.8em;
+  height: auto;
+}
